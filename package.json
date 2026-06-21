@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "verify:metadata": "node scripts/verifyMetadata.js",
+    "verify:assets": "node scripts/verifyAssets.js",
+    "verify": "npm run verify:metadata && npm run verify:assets"
+  }
+}
