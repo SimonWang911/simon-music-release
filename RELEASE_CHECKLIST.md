@@ -19,9 +19,11 @@
 Desktop:
 
 ```powershell
-npm run verify:simon
+npm run verify:release-config
 npm run pack:win:setup:x64
 npm run pack:win:setup:x86
+npm run stage:release-assets
+npm run verify:release-assets
 ```
 
 Mobile:

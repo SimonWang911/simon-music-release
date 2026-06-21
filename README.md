@@ -7,6 +7,24 @@ This repository stores public update metadata and release assets for Simon Music
 - Desktop: `publish/desktop/version.json`
 - Mobile: `publish/mobile/version.json`
 
+## Desktop Update Assets
+
+Desktop uses Electron `generic` update provider at runtime.
+
+- x64 channel file: `desktop-latest-x64.yml`
+- ia32 channel file: `desktop-latest-ia32.yml`
+- x64 installer: `simon-music-desktop-v<version>-x64-Setup.exe`
+- ia32 installer: `simon-music-desktop-v<version>-ia32-Setup.exe`
+
+The desktop repository may build the 32-bit Windows installer as `x86`. Public release assets must be staged as `ia32`; `x86` must not appear in `release-assets.json`.
+
+## Mobile Update Assets
+
+Mobile downloads the matching APK by ABI.
+
+- arm64: `simon-music-mobile-v<version>-arm64-v8a.apk`
+- armeabi-v7a: `simon-music-mobile-v<version>-armeabi-v7a.apk`
+
 ## GitHub Release Assets
 
 Use tags such as `v5.0.2`.
