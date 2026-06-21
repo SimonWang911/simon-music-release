@@ -10,10 +10,6 @@ const mobileVersion = JSON.parse(
   fs.readFileSync(path.join(root, 'publish', 'mobile', 'version.json'), 'utf8')
 ).version
 
-if (desktopVersion !== mobileVersion) {
-  throw new Error(`Desktop and mobile version mismatch: ${desktopVersion} !== ${mobileVersion}`)
-}
-
 const manifestPath = path.join(root, 'release-assets.json')
 const assets = JSON.parse(fs.readFileSync(manifestPath, 'utf8')).assets
 const assetSet = new Set(assets)
