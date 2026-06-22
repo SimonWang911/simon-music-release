@@ -7,7 +7,7 @@ const files = [
 ]
 
 for (const file of files) {
-  const data = JSON.parse(fs.readFileSync(file, 'utf8'))
+  const data = JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''))
   if (typeof data.version !== 'string' || !data.version) {
     throw new Error(`${file}: version must be a non-empty string`)
   }

@@ -1,17 +1,15 @@
 const fs = require('fs')
 const path = require('path')
 const crypto = require('crypto')
+const YAML = require('yaml')
 
 const root = path.join(__dirname, '..')
-const desktopVersion = JSON.parse(
-  fs.readFileSync(path.join(root, 'publish', 'desktop', 'version.json'), 'utf8')
-).version
-const mobileVersion = JSON.parse(
-  fs.readFileSync(path.join(root, 'publish', 'mobile', 'version.json'), 'utf8')
-).version
+const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''))
+const desktopVersion = readJson(path.join(root, 'publish', 'desktop', 'version.json')).version
+const mobileVersion = readJson(path.join(root, 'publish', 'mobile', 'version.json')).version
 
 const manifestPath = path.join(root, 'release-assets.json')
-const assets = JSON.parse(fs.readFileSync(manifestPath, 'utf8')).assets
+const assets = readJson(manifestPath).assets
 const assetSet = new Set(assets)
 
 const required = [
@@ -36,7 +34,7 @@ if (assetSet.has(`simon-music-desktop-v${desktopVersion}-x86-Setup.exe`)) {
 }
 
 const sha512Base64 = file => crypto.createHash('sha512').update(fs.readFileSync(file)).digest('base64')
-const readChannel = file => JSON.parse(fs.readFileSync(file, 'utf8'))
+const readChannel = file => YAML.parse(fs.readFileSync(file, 'utf8'))
 
 if (process.env.RELEASE_ASSET_DIR) {
   for (const item of [

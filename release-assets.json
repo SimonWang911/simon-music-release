@@ -1,12 +1,12 @@
-{
-  "assets": [
-    "desktop-latest-x64.yml",
-    "desktop-latest-ia32.yml",
-    "simon-music-desktop-v5.0.4-x64-Setup.exe",
-    "simon-music-desktop-v5.0.4-x64-Setup.exe.blockmap",
-    "simon-music-desktop-v5.0.4-ia32-Setup.exe",
-    "simon-music-desktop-v5.0.4-ia32-Setup.exe.blockmap",
-    "simon-music-mobile-v5.0.2-arm64-v8a.apk",
-    "simon-music-mobile-v5.0.2-armeabi-v7a.apk"
-  ]
+﻿{
+    "assets":  [
+                   "desktop-latest-x64.yml",
+                   "desktop-latest-ia32.yml",
+                   "simon-music-desktop-v5.0.5-x64-Setup.exe",
+                   "simon-music-desktop-v5.0.5-x64-Setup.exe.blockmap",
+                   "simon-music-desktop-v5.0.5-ia32-Setup.exe",
+                   "simon-music-desktop-v5.0.5-ia32-Setup.exe.blockmap",
+                   "simon-music-mobile-v5.0.2-arm64-v8a.apk",
+                   "simon-music-mobile-v5.0.2-armeabi-v7a.apk"
+               ]
 }
