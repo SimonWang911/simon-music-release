@@ -1,0 +1,8 @@
+version: 5.1.2
+files:
+  - url: simon-music-desktop-v5.1.2-ia32-Setup.exe
+    sha512: MVRWzv91UMNW3cYl52gupaY/JQOUEcpCcM5kD3ZTgzjK1swbV72aG0+HTMeY2XWtFXjRV1zziZ8c+qm8K/GrqA==
+    size: 89972721
+path: simon-music-desktop-v5.1.2-ia32-Setup.exe
+sha512: MVRWzv91UMNW3cYl52gupaY/JQOUEcpCcM5kD3ZTgzjK1swbV72aG0+HTMeY2XWtFXjRV1zziZ8c+qm8K/GrqA==
+releaseDate: 2026-06-24T12:24:41.433Z
