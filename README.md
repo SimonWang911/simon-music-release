@@ -20,10 +20,12 @@ The desktop repository may build the 32-bit Windows installer as `x86`. Public r
 
 ## Mobile Update Assets
 
-Mobile downloads the matching APK by ABI.
+Mobile downloads the matching APK by ABI from the GitHub Release tag `v<version>`.
 
 - arm64: `simon-music-mobile-v<version>-arm64-v8a.apk`
 - armeabi-v7a: `simon-music-mobile-v<version>-armeabi-v7a.apk`
+
+Mobile-only releases may update `publish/mobile/version.json` and the two mobile APK assets without rebuilding desktop assets.
 
 ## GitHub Release Assets
 
