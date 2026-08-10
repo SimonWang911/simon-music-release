@@ -10,6 +10,7 @@ This repository stores public update metadata and release assets for Simon Music
 ## Desktop Update Assets
 
 Desktop uses Electron `generic` update provider at runtime.
+The active desktop release targets are Windows 10/11 x64 and ia32 only. Historical ARM64 and Windows 7 assets remain attached to their original releases but are not required for new desktop releases.
 
 - x64 channel file: `desktop-latest-x64.yml`
 - ia32 channel file: `desktop-latest-ia32.yml`
@@ -39,6 +40,8 @@ Required desktop assets:
 - `simon-music-desktop-v5.0.2-x64-Setup.exe.blockmap`
 - `simon-music-desktop-v5.0.2-ia32-Setup.exe`
 - `simon-music-desktop-v5.0.2-ia32-Setup.exe.blockmap`
+
+`desktop-release-targets.json` records the current two-target release and keeps older platform-extension provenance under immutable history.
 
 Required mobile assets:
 

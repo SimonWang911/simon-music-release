@@ -1,21 +1,19 @@
 # Release Checklist
 
-## Full Release
+## Desktop-Only Release
 
 1. Update `publish/desktop/version.json`.
-2. Update `publish/mobile/version.json`.
-3. Build desktop x64 installer.
-4. Build desktop ia32 installer.
-5. Build mobile arm64-v8a APK.
-6. Build mobile armeabi-v7a APK.
-7. Update `release-assets.json`.
-8. Upload all release assets to the same GitHub Release tag.
+2. Preserve `publish/mobile/version.json` byte-for-byte.
+3. Build and verify the Windows 10/11 x64 installer.
+4. Build and verify the Windows 10/11 ia32 installer.
+5. Stage exactly two channels, two installers, and two blockmaps.
+6. Update `release-assets.json` with the six current desktop assets and the existing mobile APK names.
+7. Update `desktop-release-targets.json`; keep historical ARM64 and Windows 7 provenance in history.
+8. Upload exactly six desktop assets to the GitHub Release tag.
 9. Confirm direct metadata URLs return HTTP 200.
 10. Confirm proxy metadata URLs return HTTP 200 or fail gracefully.
 11. Confirm x64 desktop update does not select ia32 assets.
 12. Confirm ia32 desktop update does not select x64 assets.
-13. Confirm arm64 Android update downloads arm64-v8a APK.
-14. Confirm 32-bit Android update downloads armeabi-v7a APK.
 
 ## Mobile-Only Release
 
