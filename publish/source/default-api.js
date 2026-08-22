@@ -1,7 +1,7 @@
 /*!
  * @name 🎵Simon Music Source🎵
  * @description 🧝我是牛子精灵，外传就让你的牛子变小🧝
- * @version 2.0
+ * @version 2.1
  * @author SimonWang
  */
 
@@ -17,10 +17,10 @@ const {EVENT_NAMES, request, on, send, utils, env, version} = globalThis.lx;
 
 const httpFetch = (url, options = {method: "GET"}) => {
     return new Promise((resolve, reject) => {
-        console.log("--- start --- " + url);
+        console.log("--- request start ---");
         request(url, options, (err, resp) => {
             if (err) return reject(err);
-            console.log("API Response: ", resp);
+            console.log("API response received");
             resolve(resp);
         });
     });
@@ -48,9 +48,13 @@ const handleGetMusicUrl = async (source, musicInfo, quality) => {
     switch (body.code) {
         case 200:
             console.log(
-                `handleGetMusicUrl(${source}_${musicInfo.songmid}, ${quality}) success, URL: ${body.url}`
+                `handleGetMusicUrl(${source}_${musicInfo.songmid}, ${quality}) success`
             );
-            return body.url;
+            return {
+                url: body.url,
+                ...(body.ekey ? {ekey: body.ekey} : {}),
+                ...(body.expiresAt ? {expiresAt: body.expiresAt} : {}),
+            };
         case 403:
             console.log(
                 `handleGetMusicUrl(${source}_${musicInfo.songmid}, ${quality}) failed: Key失效/鉴权失败`
