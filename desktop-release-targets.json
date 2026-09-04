@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
-  "version": "5.3.0",
+  "version": "5.3.1",
   "sourceManifest": "build-config/desktop-targets.json",
   "activeReleaseTargetIds": [
     "standard-x64",
     "standard-ia32"
   ],
   "currentRelease": {
-    "releaseTag": "v5.3.0",
-    "desktopCommit": "bcb1a85d40c0d912d36ccbba4765f2187421f029",
-    "sourceTag": "v5.3.0",
+    "releaseTag": "v5.3.1",
+    "desktopCommit": "31e91dd3cbc5f3238739049130cf2182f49ec69e",
+    "sourceTag": "v5.3.1",
     "verification": {
       "scope": "packaged-smoke",
       "hostRuntimeTested": true
@@ -20,24 +20,24 @@
         "assets": [
           {
             "name": "desktop-latest-x64.yml",
-            "githubAssetId": 543813952,
+            "githubAssetId": 544248919,
             "size": 374,
-            "sha256": "816755a40f7575ea7e2be7579d96c4e340766ef19a6bcb6ac94d5758666130a5",
-            "sha512": "4b3bb10d72805907c65749db0a07912119550bb487acfa47de246cf33b3b25c0dca0e0654f0bdf40b7c4179411b23ac458f770617cfcbbde5caf77f6e54a7f5d"
+            "sha256": "b091cd98d1473ccf1a9d917d610525178d6c68d9e06d4ee3f8b297b94ada4bb4",
+            "sha512": "661cca8d49f581558150d96bc81d68414f8a158c2f112afbaec8ea2ef0f73c34965098b1470a0263dfc2151c303fd7dc33d70419db6ef28e82b30413e5f09af6"
           },
           {
-            "name": "simon-music-desktop-v5.3.0-x64-Setup.exe",
-            "githubAssetId": 543813955,
-            "size": 96838788,
-            "sha256": "8aeff15859c60f1192991210194bd55741bab1d21af0c30447cc6f0df87ffe62",
-            "sha512": "0ca912f0e1419e286626b605bb885533820b6574a429a0273e0e30b9341e36e8fa9c4a5f332287ce09eca64014b6696086bec58eb021e40575873717226a3833"
+            "name": "simon-music-desktop-v5.3.1-x64-Setup.exe",
+            "githubAssetId": 544248925,
+            "size": 96841525,
+            "sha256": "ea110199c6d17f3734d5c2dffd46689dee858ed0b1641ea01403f0f92514d7fe",
+            "sha512": "5a109fc119924928e0c6f745fddd6951b5e86706c6688070d3d201989c92a9620b08ed2cd29c0786b4017b31bd76e6275c46357c3b0773861da368fd15f9ff1b"
           },
           {
-            "name": "simon-music-desktop-v5.3.0-x64-Setup.exe.blockmap",
-            "githubAssetId": 543813954,
-            "size": 102712,
-            "sha256": "4ac743412d57823404c78fe475b6a8128df5661b5533975f61c327f147ae858e",
-            "sha512": "7c6decba7f8135a9fbe276b0ddfb7a5fd3886b04e672f41fadd95dac07e35e9224799f66417d72fa418f446dc3c19982dd0aa4c362a5d31543937b9417eebe24"
+            "name": "simon-music-desktop-v5.3.1-x64-Setup.exe.blockmap",
+            "githubAssetId": 544248926,
+            "size": 102643,
+            "sha256": "763481d882f665c7ad728fa2b09dd3143432d4f6537d0254a26592cd0bdd8e09",
+            "sha512": "7fb898a799d02a0c13590f229a64895a224ab2b91d4e52f336b1a9f5667ffb073cbbc1ff87dba74f23855326795dbb44166785d31e5d3a7fa658e47a93ba06f3"
           }
         ]
       },
@@ -46,24 +46,24 @@
         "assets": [
           {
             "name": "desktop-latest-ia32.yml",
-            "githubAssetId": 543813953,
+            "githubAssetId": 544248917,
             "size": 376,
-            "sha256": "019d28589cc1c427a1b5f623b6a15d2f999548732a3f42be3a2383464b7c5917",
-            "sha512": "1e4abb19ee8d10555d0acd40f5a44e1bf0b1eb33040b619bb790b26fdde6d12c17cae304502effa007342a495cc8d2201cb5673a03a75175f009ad25c8bdc682"
+            "sha256": "3d79327f75f095426e1b7d55172533a9c4080a3bc5192efd0dfb1a4c45240199",
+            "sha512": "96dad5b0a31e16f5ceb8c59cd9bbc160ee3c25dd02d89438f779f2afad890ca7965adcbbb11e5c2a4b3bb65ba539873b95c1d015c628dfa2c7102969860df403"
           },
           {
-            "name": "simon-music-desktop-v5.3.0-ia32-Setup.exe",
-            "githubAssetId": 543813950,
-            "size": 90513785,
-            "sha256": "585bf1d5f9f05c7216f3d0801eb93824faf84b3241c48f7056ea3a6828a06273",
-            "sha512": "f30d0c6e4eda6d5ef9c0e7dbdc31c14411709bdd55fd5e484e7a7b2fc7007b3f4391b9e0a8436dacdf3e91df8156ccb12deda35f490178e8abb09d1781298268"
+            "name": "simon-music-desktop-v5.3.1-ia32-Setup.exe",
+            "githubAssetId": 544248918,
+            "size": 90520491,
+            "sha256": "21422be086ac7060bf01d298b96e968e6bbef6087eaff3e29721258b399863cc",
+            "sha512": "f6c10c7de3c50eadde6d89e5d015e7ab38345c95f66ba32b403084adb8b4a3c4f635f2d7ed46ff097039111605e58a3b1836c98966ede4ebb9aaae1aec171dce"
           },
           {
-            "name": "simon-music-desktop-v5.3.0-ia32-Setup.exe.blockmap",
-            "githubAssetId": 543814283,
-            "size": 95021,
-            "sha256": "230cc7dfa8380b7c05fc432f5df940fcb8cc5b31e739ab2beca25a78201a9237",
-            "sha512": "286036d27ce06df4482e224bf7c3596790c597146ae92300ee852740d2e1251a33d1f20b43340b697dcebe8f7e2700893cbccc39a8233372586a5ea07ce8eb68"
+            "name": "simon-music-desktop-v5.3.1-ia32-Setup.exe.blockmap",
+            "githubAssetId": 544249281,
+            "size": 95285,
+            "sha256": "75395ce85b2693e9fe6fb234eb1f3c07d9298170beb4408ac71d0ca6f5180e6c",
+            "sha512": "c5367fd6d2d5830758cb5760cb2f55bb7f2a222121a6f98748737f676854b86a8b83b64cb78c842af6b8d80a56003e992cea1780cc83b8827fffdad895a7b24a"
           }
         ]
       }
@@ -173,7 +173,7 @@
       "electronVersion": "37.6.1",
       "nodeAbi": 136,
       "channelFile": "desktop-latest-x64.yml",
-      "installer": "simon-music-desktop-v5.3.0-x64-Setup.exe"
+      "installer": "simon-music-desktop-v5.3.1-x64-Setup.exe"
     },
     {
       "id": "standard-ia32",
@@ -182,7 +182,7 @@
       "electronVersion": "37.6.1",
       "nodeAbi": 136,
       "channelFile": "desktop-latest-ia32.yml",
-      "installer": "simon-music-desktop-v5.3.0-ia32-Setup.exe"
+      "installer": "simon-music-desktop-v5.3.1-ia32-Setup.exe"
     }
   ]
 }
