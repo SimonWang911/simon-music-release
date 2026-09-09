@@ -1,6 +1,6 @@
 # Release Checklist
 
-## 5.3.2 Unified Release Preparation (2026-09-09)
+## 5.3.2 Unified Release Published (2026-09-09)
 
 Formal packages were built and verified locally. Mobile source CI retains SDK contracts, complete Simon contracts and type checking; it neither builds packages nor reads signing credentials. No signing material was uploaded.
 
@@ -13,12 +13,30 @@ Later source changes are documentation, CI and tests only. Production input and 
 
 - Mobile source CI: [Verify 34349392125](https://github.com/SimonWang911/ikun-music-mobile/actions/runs/34349392125), all three checks passed. The previous missing-signing-input cloud build failure remains in history.
 - Local proof: desktop diagnostics/release-5.3.2-20260909/resume-final/local-build-proof.json and local-release-sources.json.
-- Four formal installers, eight assets: Windows x64/ia32, Android arm64-v8a/armeabi-v7a. Uploaded draft ID: 385487052; GitHub size and SHA-256 digests match local files.
+- Four formal installers, eight assets: Windows x64/ia32, Android arm64-v8a/armeabi-v7a. Published release ID: 385487052; GitHub size and SHA-256 digests match local files. All uploaded asset IDs were preserved on publication.
 - Desktop: both final installer payloads entered the main UI with isolated profiles, upgrade/sync and NTFS file-identity regression passed; no overlay installation on the user's PC.
 - Android: both signed non-debug ABI packages checked; 23 JUnit suites / 140 tests passed. Arm64 package overlay-installed and tested on PJD110 with existing data present. V7a device runtime was not tested.
 - Existing default-source files and immutable platform-extension history are unchanged.
 - Staged release metadata, contract mutation tests, actual asset hashes/channels and default-source verification all passed; desktop and mobile release-repository checks both passed. Evidence: `release-local-metadata-gates.log`, `desktop-local-release-repo.log`, `mobile-local-release-repo.log` under the same diagnostics directory.
-- Release stays draft until explicit publication approval. Public metadata main remains 5.3.1 until public 5.3.2 assets are verified. Chrome blog submission follows that gate.
+- Publication approval received. The release was made public first, real asset GET checks passed next, and only then was public metadata main advanced to 5.3.2. Chrome blog submission followed a separate action-time confirmation.
+
+### Publication checks
+
+- [GitHub v5.3.2](https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.2) is public, non-prerelease and Latest; published at `2026-09-09T12:39:53Z`.
+- The immutable release tag remains at `25efae6eac82b20d29e77d2f27aeddb43901e358`. Later publication-audit documentation does not move that tag or change any package.
+- All eight canonical asset URLs passed direct and gh-proxy GET checks (16 checks); both desktop Latest channel aliases passed on both routes (four more checks). Channels and blockmaps were downloaded and fully hashed. Large installers/APKs were checked using exact 4096-byte Range responses, total sizes, and GitHub full-file SHA-256 digests; they were not fully re-downloaded during this publication step.
+- Desktop and mobile live update metadata each passed on gh-proxy, direct, wget.la and ghfast.top (eight HTTP 200 checks), without cache-busting. Version 5.3.2, release descriptions and complete history match the local verified metadata.
+- The [existing Simon Music blog](http://simonwang.cn:7003/index.php/archives/3/) was updated through the logged-in Chrome session. Both version labels, all four canonical package links, 13 Android notes and eight Windows notes were checked in the saved editor, rendered public page and an anonymous HTTP 200 response. Original introduction, tutorials and other editor textareas were preserved.
+- Both source repositories remain on main at their source v5.3.2 tags, matching remote main. No business code, dependencies, signing materials, packages or user data changed during publication; no new build or device test is claimed.
+
+Publication evidence is archived in desktop `diagnostics/release-5.3.2-20260909/resume-final/`:
+
+| Check | Evidence |
+| --- | --- |
+| Public release and preserved assets | `published-v532.json`, `public-v532-assets.json` |
+| Update activation and live routes | `updates-v532-activated.json`, `live-v532-metadata.json` |
+| Saved blog and public-page contents | `blog-saved-editor-v532.json`, `blog-public-v532.json` |
+| Complete release before audit-only commit | `publication-complete-before-doc-audit.json` |
 
 ## Desktop-Only Release
 
