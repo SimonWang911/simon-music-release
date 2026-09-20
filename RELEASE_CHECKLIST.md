@@ -1,5 +1,27 @@
 # Release Checklist
 
+## 5.3.3 Desktop Release Published (2026-09-21)
+
+Desktop-only 5.3.3 was built from source commit `adb52f55a2df0369d3ca5e3901dfd1ada7bd0848` and source tag `v5.3.3`. The release contains the verified Windows x64 and ia32 installers, channel files, and blockmaps. Mobile metadata and the existing 5.3.2 APK assets were preserved byte-for-byte and were not rebuilt.
+
+- GitHub Release: https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.3
+- Local staging: `dist/5.3.3/`
+- Desktop metadata: `publish/desktop/version.json` → 5.3.3
+- Mobile metadata: `publish/mobile/version.json` remains 5.3.2 (SHA-256 `A888537EAD2F362A4D52C30E9CB4824BFA8E2BC077F3A31F85DF33EFD2D13878`)
+- Local and remote asset sizes, SHA-256/SHA-512, channel references, target provenance, and release-repository contracts passed.
+- x64 and ia32 packaged smoke checks entered the Simon Music main UI and passed the Worker crypto check.
+
+### 5.3.3 desktop assets
+
+| Asset | Size | SHA-256 |
+| --- | ---: | --- |
+| `desktop-latest-x64.yml` | 374 | `176abfc9aec890996089520d4ffe3987876360387cdd6ddfd8b4b6595e4c8856` |
+| `simon-music-desktop-v5.3.3-x64-Setup.exe` | 96851302 | `0dfb583478ee980a23a26527e7e158ddb909cea646a38e846b690b4fc54f866d` |
+| `simon-music-desktop-v5.3.3-x64-Setup.exe.blockmap` | 102634 | `174e649c04c507653163ebd3498d6e4c4856c92bb0dd1731499fbadaf285b26d` |
+| `desktop-latest-ia32.yml` | 376 | `1ee7e4f6b6e4381308bbdc1ad95c96916ff447ba9b322c63b00316e481916899` |
+| `simon-music-desktop-v5.3.3-ia32-Setup.exe` | 90527597 | `9da5c17a61799ad96ae51a97c6452c0065cd1aaf49f7f54c45ceb1bed3588de4` |
+| `simon-music-desktop-v5.3.3-ia32-Setup.exe.blockmap` | 95089 | `da4914c30cc7a309e49ee64051dc0f18ff136bc639785a909809709ec2f165d3` |
+
 ## 5.3.2 Unified Release Published (2026-09-09)
 
 Formal packages were built and verified locally. Mobile source CI retains SDK contracts, complete Simon contracts and type checking; it neither builds packages nor reads signing credentials. No signing material was uploaded.
