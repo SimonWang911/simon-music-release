@@ -7,7 +7,7 @@ Desktop-only 5.3.3 was built from source commit `adb52f55a2df0369d3ca5e3901dfd1a
 - GitHub Release: https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.3
 - Local staging: `dist/5.3.3/`
 - Desktop metadata: `publish/desktop/version.json` → 5.3.3
-- Mobile metadata: `publish/mobile/version.json` remains 5.3.2 (SHA-256 `A888537EAD2F362A4D52C30E9CB4824BFA8E2BC077F3A31F85DF33EFD2D13878`)
+- Mobile metadata: `publish/mobile/version.json` remains 5.3.2 (canonical UTF-8/LF SHA-256 `AD395B300B86575F93716F29AE3343E7FA57C73CAABA24410AD32FCC7B2DBDAA`; Windows checkout line endings may produce a different raw-file hash)
 - Local and remote asset sizes, SHA-256/SHA-512, channel references, target provenance, and release-repository contracts passed.
 - x64 and ia32 packaged smoke checks entered the Simon Music main UI and passed the Worker crypto check.
 
