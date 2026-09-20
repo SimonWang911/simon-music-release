@@ -1,15 +1,16 @@
 # Release Checklist
 
-## 5.3.3 Desktop Release Published (2026-09-21)
+## 5.3.3 Dual Release Published (2026-09-21)
 
-Desktop-only 5.3.3 was built from source commit `adb52f55a2df0369d3ca5e3901dfd1ada7bd0848` and source tag `v5.3.3`. The release contains the verified Windows x64 and ia32 installers, channel files, and blockmaps. Mobile metadata and the existing 5.3.2 APK assets were preserved byte-for-byte and were not rebuilt.
+Simon Music 5.3.3 now contains both clients. The desktop client was built from source commit `adb52f55a2df0369d3ca5e3901dfd1ada7bd0848`; the mobile client was built from source commit `7ac9eebfe4ca2a6363ac373417e0cf684e312b3f`. Both source repositories have the `v5.3.3` tag, and the release contains the verified Windows x64/ia32 installers plus Android arm64-v8a/armeabi-v7a APKs.
 
 - GitHub Release: https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.3
 - Local staging: `dist/5.3.3/`
 - Desktop metadata: `publish/desktop/version.json` → 5.3.3
-- Mobile metadata: `publish/mobile/version.json` remains 5.3.2 (canonical UTF-8/LF SHA-256 `AD395B300B86575F93716F29AE3343E7FA57C73CAABA24410AD32FCC7B2DBDAA`; Windows checkout line endings may produce a different raw-file hash)
+- Mobile metadata: `publish/mobile/version.json` → 5.3.3, with the mobile download refactor and the 5.3.2 history entry retained
 - Local and remote asset sizes, SHA-256/SHA-512, channel references, target provenance, and release-repository contracts passed.
 - x64 and ia32 packaged smoke checks entered the Simon Music main UI and passed the Worker crypto check.
+- Mobile release gates, TypeScript checks, download-focused native unit tests, release APK version/ABI/signature checks passed. No user data was cleared or migrated destructively.
 
 ### 5.3.3 desktop assets
 
@@ -21,6 +22,13 @@ Desktop-only 5.3.3 was built from source commit `adb52f55a2df0369d3ca5e3901dfd1a
 | `desktop-latest-ia32.yml` | 376 | `1ee7e4f6b6e4381308bbdc1ad95c96916ff447ba9b322c63b00316e481916899` |
 | `simon-music-desktop-v5.3.3-ia32-Setup.exe` | 90527597 | `9da5c17a61799ad96ae51a97c6452c0065cd1aaf49f7f54c45ceb1bed3588de4` |
 | `simon-music-desktop-v5.3.3-ia32-Setup.exe.blockmap` | 95089 | `da4914c30cc7a309e49ee64051dc0f18ff136bc639785a909809709ec2f165d3` |
+
+### 5.3.3 mobile assets
+
+| Asset | Size | SHA-256 |
+| --- | ---: | --- |
+| `simon-music-mobile-v5.3.3-arm64-v8a.apk` | 24536211 | `29939042f8fac3b2f8435a92da43f5582a8c52e263b3da19a54285948f29b7e2` |
+| `simon-music-mobile-v5.3.3-armeabi-v7a.apk` | 19640640 | `8f92ad0c239d7b0ffd8cf54b3d2ca83fcaf466c9f2e0e7e428690f85364f81a4` |
 
 ## 5.3.2 Unified Release Published (2026-09-09)
 
