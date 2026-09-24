@@ -145,3 +145,10 @@ The draft Release was uploaded and independently matched against the local stagi
 - Mobile source contracts, release configuration, typecheck, release unit tests, ABI/version manifest checks, and APK signature checks passed.
 - Release repository metadata, target provenance, source hashes, asset names, sizes, channels and SHA-256 values passed `npm run verify` before publication.
 - Existing 5.3.3 assets and historical metadata remain unchanged; no user download data or local application data was modified.
+
+### Publication checks
+
+- GitHub Release [`v5.3.4`](https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.4) is public and non-prerelease; published at `2026-09-24T07:41:59Z`.
+- All six direct release asset URLs returned HTTP 200 with the recorded sizes; both APK URLs and both Windows installer URLs were checked without downloading a second copy.
+- Desktop and mobile public metadata returned HTTP 200 and version `5.3.4` from the direct route and from `gh-proxy.com`, `wget.la`, and `ghfast.top` fallback routes.
+- Release repository `main` is at commit `9927811`; source repositories are on `main` with the pushed `v5.3.4` tags.
