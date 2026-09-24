@@ -114,3 +114,34 @@ Release repository:
 cd "C:\Users\Simon\Desktop\GitHub\simon-music-release"
 npm run verify
 ```
+
+## Simon Music 5.3.4 Release (2026-09-24)
+
+### Source and build provenance
+
+| Platform | Source commit | Source tag | Build evidence |
+| --- | --- | --- | --- |
+| desktop | `0676c4f0fa52cc52a5634fae8caa38bbb99a6a40` | `v5.3.4` | x64/ia32 packaged smoke passed; native PE architecture and runtime entry verified |
+| mobile | `5daa32336fcbc7dd4028c3ad6026afcb6b7e5e4b` | `v5.3.4` | `testReleaseUnitTest` and release APK build passed; arm64/v7a signatures and manifests verified |
+
+### Published assets
+
+The draft Release was uploaded and independently matched against the local staging directory before publication. GitHub asset IDs and SHA-256 digests:
+
+| Asset | GitHub asset ID | Size | SHA-256 |
+| --- | ---: | ---: | --- |
+| `desktop-latest-x64.yml` | 585410944 | 374 | `104764d8c807f534e55b9443147b040207b3ad580ec382bdea35a43b98f59197` |
+| `simon-music-desktop-v5.3.4-x64-Setup.exe` | 585412441 | 96852818 | `e31f073934b63165d6a87ac08af4c44966b4a58335cea268595ca67da75b32de` |
+| `simon-music-desktop-v5.3.4-x64-Setup.exe.blockmap` | 585410941 | 102657 | `34a1ad561fe3ca3b6490b8c8bb6c26f85b6d055ed39ac03336b2d45b1961a1aa` |
+| `desktop-latest-ia32.yml` | 585410943 | 376 | `57753c897ea60d422af46d2ac0c83d075838936464d9fa6d96e3028b066c1366` |
+| `simon-music-desktop-v5.3.4-ia32-Setup.exe` | 585412443 | 90529007 | `4776b8f02f98b864b9c5ec9564cc80fd83f83a8dc7c163e4e05ef8b2a8d00ff4` |
+| `simon-music-desktop-v5.3.4-ia32-Setup.exe.blockmap` | 585411094 | 95324 | `3afac43d7774dedc52c91f35a7d5b5f115bc962df2c646b2f2062a7aceb0eb09` |
+| `simon-music-mobile-v5.3.4-arm64-v8a.apk` | 585411097 | 24544660 | `e054f5d15a669f0fbf2b7b45a532c266d46b27308b54773cc2e7954fe863ce2a` |
+| `simon-music-mobile-v5.3.4-armeabi-v7a.apk` | 585411103 | 19649078 | `987d499fca075ac33d50da5032d4d0524e8eacc751d424f4aa173a2175358f3f` |
+
+### Verification result
+
+- Desktop source contracts, release configuration, x64/ia32 package architecture checks, staged asset checks, and isolated packaged smoke tests passed.
+- Mobile source contracts, release configuration, typecheck, release unit tests, ABI/version manifest checks, and APK signature checks passed.
+- Release repository metadata, target provenance, source hashes, asset names, sizes, channels and SHA-256 values passed `npm run verify` before publication.
+- Existing 5.3.3 assets and historical metadata remain unchanged; no user download data or local application data was modified.
