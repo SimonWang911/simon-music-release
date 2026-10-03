@@ -1,0 +1,8 @@
+version: 5.3.5
+files:
+  - url: simon-music-desktop-v5.3.5-ia32-Setup.exe
+    sha512: E5omAqFl9ZVr6aOGygzJQOIZPgrKeSpsfRIo130CaBFlxIWl7si3P4GfY/MK9Z0PLylsTxtLYaBYgmAGWGFCdQ==
+    size: 90532364
+path: simon-music-desktop-v5.3.5-ia32-Setup.exe
+sha512: E5omAqFl9ZVr6aOGygzJQOIZPgrKeSpsfRIo130CaBFlxIWl7si3P4GfY/MK9Z0PLylsTxtLYaBYgmAGWGFCdQ==
+releaseDate: 2026-10-03T02:07:28.882Z
