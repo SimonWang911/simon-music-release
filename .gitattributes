@@ -1,1 +1,2 @@
 publish/source/default-api.js -text
+dist/*/*.yml -text
