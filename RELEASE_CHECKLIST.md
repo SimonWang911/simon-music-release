@@ -1,5 +1,28 @@
 # Release Checklist
 
+## 5.3.7 Dual Release Published (2026-10-16)
+
+- 正式发布：[Simon Music 5.3.7](https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.7)，Release ID 414894264，公开、非预发布、Latest；发布时间 2026-10-16T11:50:40Z。
+- 实际构建源码：desktop `7c50f3bbdd502c7adf86b04ca4ea50cc61908d4f`；mobile `5734198cc02fd0d0b3940f3406c0c9cdfdf67c9f`。双端 `v5.3.7` 标签固定到各自构建提交，不移动。
+- 发布 metadata 初始启用提交：`b57179650181e7a620beedf4cd0f4dc5d43529d8`；上传草稿并验证八资产后发布正式版，最后推进 main 启用 desktop/mobile 独立更新入口。历史 provenance、更新说明历史、在线默认源均保持不变。
+- Windows x64/ia32 正式安装器各90个载荷文件与原 packaged 目录逐一 SHA-256 一致；PE/native、48条运行时依赖、无生产 sourcemap、主界面及下载 Worker 实测通过。临时目录的 x64 启动曾被本机应用控制拦截；未更改安全策略，运行测试使用字节完全一致的原始 build 产物。Windows 延续未配置 Authenticode 的策略。
+- Android arm64/v7a 正式包版本5.3.7、109003/109001、包名、单ABI、非debuggable、JS bundle及与旧版同签名检查通过；202项 Release 单元测试全部通过。额外签名 x86_64 Release 在只读模拟器进入搜索主界面，无致命异常；该测试包未发布，不声称 ARM 真机运行测试。
+- 双端 source/domain/合同、类型检查、构建、staging、发布仓库 verify 均通过。手机旧 Node18 云端测试 API 不匹配已通过仅对齐 .nvmrc 到本地构建 Node24.19.0 解决；CI [38895777143](https://github.com/SimonWang911/ikun-music-mobile/actions/runs/38895777143) SDK/contracts/typecheck 全部成功，后续环境与说明提交不改变 APK。
+- 24项公开HTTP检查通过：八资产 direct/gh-proxy 共16项，双端 metadata 四路线共8项；小文件完整验哈希，大文件验证首4096字节/总长度及 GitHub 完整文件 SHA-256。
+- 本地 staging：`dist/5.3.7/`；证据：`%TEMP%/simon-music-release-5.3.7-20261016/`。没有覆盖用户设备、没有清理历史 untracked 资料，没有上传签名材料、默认源私有配置或测试包。
+
+| Asset | GitHub asset ID | Size | SHA-256 |
+| --- | ---: | ---: | --- |
+| `desktop-latest-ia32.yml` | 647139614 | 376 | `80977e311fa14fffdff8770964b0234345492c739b4a7905de7dbf04a7503ab0` |
+| `desktop-latest-x64.yml` | 647139609 | 374 | `6023f838a69b7d3b6d06a09a6955bfcf914fb3e33d451077a3ac24be253d8c78` |
+| `simon-music-desktop-v5.3.7-ia32-Setup.exe` | 647139612 | 90533182 | `f4f99be39d563558afebf41c8e5b63bd5e6097533583ebdfb344a4099ccf812d` |
+| `simon-music-desktop-v5.3.7-ia32-Setup.exe.blockmap` | 647139606 | 95138 | `4a92391c4e6ec5cd9bb3f8749fc366f52334d2f3e832db80eb81ac5a2a0ffac8` |
+| `simon-music-desktop-v5.3.7-x64-Setup.exe` | 647139610 | 96860303 | `7b7fff81107afcc5fbec069f7a2bf964d3d1bab23b6613ce70cf429fd8090e52` |
+| `simon-music-desktop-v5.3.7-x64-Setup.exe.blockmap` | 647139642 | 102807 | `12fff6afb4d84201709915e360ec52e2fcbc920ba064673dacefa4110028988e` |
+| `simon-music-mobile-v5.3.7-arm64-v8a.apk` | 647139648 | 24548945 | `52a85bd893105cc478efebd05a375738eeb29375bdd73118c4e0f29e33e8df9f` |
+| `simon-music-mobile-v5.3.7-armeabi-v7a.apk` | 647139652 | 19653355 | `e3d5d258ac908608bec14073610fd15d24d48f1c20e2da78ea32eb12bdc6de16` |
+
+
 ## 5.3.3 Dual Release Published (2026-09-21)
 
 Simon Music 5.3.3 now contains both clients. The desktop client was built from source commit `adb52f55a2df0369d3ca5e3901dfd1ada7bd0848`; the mobile client was built from source commit `7ac9eebfe4ca2a6363ac373417e0cf684e312b3f`. Both source repositories have the `v5.3.3` tag, and the release contains the verified Windows x64/ia32 installers plus Android arm64-v8a/armeabi-v7a APKs.
