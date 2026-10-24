@@ -1,5 +1,25 @@
 # Release Checklist
 
+## 5.3.8 Dual Release Published (2026-10-24)
+
+- 正式发布：[Simon Music 5.3.8](https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.8)，Release ID 422704489，公开、非预发布；发布时间 2026-10-24T12:07:49Z。
+- 实际构建源码：desktop `bcc4b6da1ea0781d46db53fc0f4c33a65d08ce68`；mobile `38519aa5f2188dc1ddd2ea5d75332ac005a1c437`。双端 `v5.3.8` 标签固定到各自发布合并提交。
+- 桌面端：构建、x64/ia32 签名安装器、频道文件、blockmap、源码合同、发布仓库合同均通过；Electron 37.6.1 / Node ABI 136，延续未配置 Authenticode 的现有策略。
+- 手机版：Release arm64-v8a 与 armeabi-v7a 包版本 5.3.8、versionCode 110003/110001、包名 `com.simon.music.mobile`、单 ABI、Release 构建通过；移动端源代码合同、更新流程、类型检查和发布仓库合同通过。
+- 双端更新说明均已写入各自 `CHANGELOG.md`、`publish/changeLog.md` 和发布仓库 `publish/*/version.json`；5.3.7 历史记录保留。
+- 本地 staging：`dist/5.3.8/`；发布仓库 `npm run verify`、双端 `verify:simon-release-repo` 均通过。历史 `dist/*` 与 `work/` 未清理。
+
+| Asset | GitHub asset ID | Size | SHA-256 |
+| --- | ---: | ---: | --- |
+| `desktop-latest-ia32.yml` | 672156727 | 376 | `6372f096f2b6cad4f0adaefd75f22788f5c1934e56265b07494e3eabd66c53ba` |
+| `desktop-latest-x64.yml` | 672156725 | 374 | `1f3ff81fd6f66e3bd46c953a77115294d209966fefee66b1d6d06ba6af5dfbbb` |
+| `simon-music-desktop-v5.3.8-ia32-Setup.exe` | 672156726 | 90541713 | `df0960e8e6dfe9a5df5ce0be519464ae4ee072537b939daeb417687b089191b8` |
+| `simon-music-desktop-v5.3.8-ia32-Setup.exe.blockmap` | 672156807 | 95075 | `4acc2931e7a1d156921e5fcaa4b790e43ba894a182f023cb9f297be1f9f73103` |
+| `simon-music-desktop-v5.3.8-x64-Setup.exe` | 672156724 | 96861819 | `fc60bf630b6932ff0bb3b83045b88810fa000c4d07eb735e21403630f627ebd4` |
+| `simon-music-desktop-v5.3.8-x64-Setup.exe.blockmap` | 672156723 | 102849 | `4db53900cff9ab31f137502af9e615893f63a3d374b42b42c640b03f09b14a6b` |
+| `simon-music-mobile-v5.3.8-arm64-v8a.apk` | 672156803 | 24549507 | `cd859b915d85a8abb7cd5e258909b1a1981581693f1eb70fd65d900437e994c1` |
+| `simon-music-mobile-v5.3.8-armeabi-v7a.apk` | 672156833 | 19653904 | `3d792e2d6c10f75e115db2e4b65c8165ca87359791b60dca0ed9090b8416a46e` |
+
 ## 5.3.7 Dual Release Published (2026-10-16)
 
 - 正式发布：[Simon Music 5.3.7](https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.7)，Release ID 414894264，公开、非预发布、Latest；发布时间 2026-10-16T11:50:40Z。
