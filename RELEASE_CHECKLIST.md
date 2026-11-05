@@ -1,5 +1,21 @@
 # Release Checklist
 
+## 5.3.9 Desktop Release Published (2026-11-05)
+
+- 正式发布：[Simon Music 5.3.9](https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.9)，Release ID 434650130，公开、非预发布；发布时间 2026-11-05T01:14:24Z。
+- 实际构建源码：desktop `a29738d8d908674b6649118dc8b805603aabb96d`；源码仓库已推送 `v5.3.9` 标签。手机版未参与本次发版，手机版 metadata 与资产继续保持 5.3.8。
+- 桌面端：x64/ia32 安装器、频道文件、blockmap、源码合同、构建产物、运行时、sourcemap、smoke、打包校验和发布仓库校验均通过；Electron 37.6.1 / Node ABI 136，延续未配置 Authenticode 的现有策略。
+- GitHub Release 仅上传六个桌面资产；未上传手机版 APK。历史 `dist/*` 与 `work/` 未清理。
+
+| Asset | GitHub asset ID | Size | SHA-256 |
+| --- | ---: | ---: | --- |
+| `desktop-latest-ia32.yml` | 711570827 | 376 | `06c6ed59a6bc98bf1e01dd2c45ab062ab15ae894bb46f6d2cbf98abe65cd2c82` |
+| `desktop-latest-x64.yml` | 711570821 | 374 | `2bfb2215733fdbcca6e58cbcacbdd6e7d7a4b9392b18bcb97361ebb42a0c1b0b` |
+| `simon-music-desktop-v5.3.9-ia32-Setup.exe` | 711570819 | 90542388 | `dc4ed691e1798b40fff07768f0184c0bc3a9b1deb11188f9b8b4b6c863639130` |
+| `simon-music-desktop-v5.3.9-ia32-Setup.exe.blockmap` | 711570895 | 95374 | `5d59fe5805eb9fade4a6fe619140c6c63fb63bcd2d36a85d13511e1e87577985` |
+| `simon-music-desktop-v5.3.9-x64-Setup.exe` | 711570817 | 96861479 | `0d54d89387d4ed04f0974a485b15af50e8abad9d714a7539bbf69a1e9ee7edc3` |
+| `simon-music-desktop-v5.3.9-x64-Setup.exe.blockmap` | 711570818 | 102860 | `6181a2438199e6dcc71e34480bae96a9f3e9dac47ab05719192615208b4580a7` |
+
 ## 5.3.8 Dual Release Published (2026-10-24)
 
 - 正式发布：[Simon Music 5.3.8](https://github.com/SimonWang911/simon-music-release/releases/tag/v5.3.8)，Release ID 422704489，公开、非预发布；发布时间 2026-10-24T12:07:49Z。
